@@ -1,0 +1,18 @@
+# Binaries
+esqlorer
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Go build/coverage artifacts
+*.out
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Editor/OS
+.DS_Store
