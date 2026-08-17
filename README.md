@@ -44,4 +44,8 @@ Other server management commands:
 ./esqlorer auth remove local   # remove a server
 ```
 
-Servers are stored in `~/.config/esqlorer/config.yaml` by default (override with `--config`).
+Servers are stored in a per-OS config file by default (override with `--config`):
+
+- Linux: `~/.config/esqlorer/config.yaml`
+- macOS: `~/Library/Application Support/esqlorer/config.yaml`
+- Windows: `%LOCALAPPDATA%\esqlorer\config.yaml`
