@@ -55,6 +55,7 @@ func Execute() error {
 func init() {
 	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "Path to config file (default "+config.DefaultConfigPath()+")")
 	rootCmd.PersistentFlags().Bool("agent-mode", false, "Enable machine-readable agent mode")
+	_ = viper.BindPFlag("config", rootCmd.PersistentFlags().Lookup("config"))
 	rootCmd.AddCommand(auth.Cmd)
 	rootCmd.AddCommand(query.Cmd)
 	rootCmd.AddCommand(tui.Cmd)
